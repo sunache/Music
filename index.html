@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<title>GitMusic</title>
+
+	<!-- CSS Reset -->
+	<link rel="stylesheet" href="assets/css/reset.css">
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<!-- Our styles -->
+	<link rel="stylesheet" href="assets/css/style.css">
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One" rel="stylesheet"> 
+
+	<!-- Bootstrap's JavaScript -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+	<!-- Video for the background -->
+
+	<video autoplay loop muted poster="screenshot.jpg" id="background">
+		<source src="assets/images/lightvideo.mp4" type="video/mp4">
+	</video>
+
+	<!-- Giant container to hold video background, search bar -->
+
+	<div class="container">
+
+	<!-- Invisible space for padding -->
+
+		<div class="row" id="empty-space">
+			<div class="col-md"></div>
+		</div>
+
+	<!-- Search bar -->
+
+	<div class="jumbotron">
+
+		<h1 class="display-3">GitMusic</h1>
+
+			<p class="lead">
+				<form class="form-inline justify-content-center">
+					<input class="form-control mr-sm-2" type="search" placeholder="Search for a band/artist!" aria-label="Search" id="search-length">
+
+					<button class="btn btn-outline-success my-2 my-sm-0 search-button-color" type="submit" id="submit-search" href="search.html">Search </button>
+					
+					<!-- <button class="btn my-2 my-sm-0" type="submit" id="search-button-color search-button"><a href="search.html">Search</a></button>  -->
+				</form>
+			</p>
+
+	<!-- Recent searches -->
+
+		<h3 class="justify-content-center">Recent Searches:</h3>
+			<p>
+		  	<form class="form-inline justify-content-center">
+					<div id="button-holder">
+						
+					</div>
+					<!-- <button class="btn my-2 my-sm-0 search-button-color" type="submit" >x</button>
+					<button class="btn btn-outline-success my-2 my-sm-0 search-button-color" type="submit" >x</button> -->	    
+				</form>
+			</p>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12"></div>
+	</div>
+	
+	<div class="row">
+		<div class="col-md-12"></div>
+	</div>
+
+	<!-- Empty rows to push search bar to center -->
+
+	<div class="row">
+		<div class="col-md"></div>
+	</div>
+
+	<!-- End container -->
+	</div>
+
+	<!-- Begin search information -->
+
+	<div class="row mb-2">
+		<!-- Vimeo API Videos -->
+		<div class="col-md-6" id="append">
+		</div>
+		<div class="col-md-1">
+	</div>
+		<!-- SeatGeek info -->
+		<div class="col-md-5" id="SeatGeek-append">
+		</div>
+	</div>
+
+<!-- 
+	<div class="jumbotron">
+		<div class="container">
+			<div class="row">
+				<div class="col-md"></div>
+	    		<div class="col-md-8" id="append"></div>
+	   			<div class="col-md"></div>
+			</div>
+		</div>
+	</div>
+ -->
+	<!-- SeatGeek info -->
+	<!-- <div class="jumbotron">
+		<div class="container">
+			<div class="row">
+				<div class="col-md"></div>
+	    		<div class="col-md-8">
+	    			<div id="SeatGeek-append"></div>
+	    		</div>
+	   		<div class="col-md"></div>
+			</div>
+		</div>
+	</div> -->
+
+
+
+	<!-- Spotify info -->
+<!-- 
+	<div class="jumbotron">
+		<div class="container">
+			<div class="row">
+				<div class="col-md"></div>
+	    		<div class="col-md-8" id="SeatGeek-append"></div>
+	   			<div class="col-md"></div>
+			</div>
+		</div>
+	</div> -->
+		
+	<!-- Firebase database -->
+	<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+
+	<!-- JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="assets/javascript/gitmusic.js"></script>
+	<script src= "SeatGeek.js"></script>
+	<script src="vimeoAPI/vimeoapi.js"></script>
+	
+</body>
+
+</html>
